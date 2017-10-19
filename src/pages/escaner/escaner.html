@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Escaner
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page11">
+  <div>
+    <img src="assets/img/phrujQZvRGWtBjIilKlt_barcode_product.jpg" style="display:block;width:70%;height:auto;margin-left:auto;margin-right:auto;" />
+  </div>
+  <div class="spacer" style="width:300px;height:19px;" id="escaner-spacer8"></div>
+  <div id="escaner-markdown2" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      Gaseosa SevenUp
+    </p>
+  </div>
+  <div (click)="scan()">
+    <img src="assets/img/AB4ONzTMTaidGJwpmvII_7.jpg" style="display:block;width:40%;height:auto;margin-left:auto;margin-right:auto;" />
+  </div>
+  <div class="spacer" style="width:300px;height:13px;" id="escaner-spacer11"></div>
+  <div id="escaner-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+    <p style="color:#000000;">
+      $ 2.500
+    </p>
+  </div>
+  <div>
+    
+
+      <h2>
+          Codigo Escaneado <br> {{codigoescaneado}}
+        
+      </h2>
+      <h2>
+        Lista de codigos Escaneados <br> {{codigosEscaneados[0]}}
+        <br> {{codigosEscaneados[1]}}
+        <br> {{codigosEscaneados[2]}}
+        <br> {{codigosEscaneados[3]}}
+        <br> {{codigosEscaneados[4]}}
+      
+    </h2>
+  </div>
+</ion-content>

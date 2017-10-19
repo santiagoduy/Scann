@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      lista
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page12">
+
+<h1 [hidden]="txt"  (click)="hello()" >  databinding</h1>
+{{txt1}}
+<input type="text" [(ngModel)]="txt">
+
+  <div class="spacer" style="width:300px;height:40px;" id="lista-spacer9"></div>
+  
+  <div>
+  <div *ngFor="let item of productos1">
+      <h1>{{item.title}}</h1>
+  </div>
+
+</div>
+<button (click)="consumir()"> Consumir +</button>
+
+  <ion-list id="lista-list6">
+      <ion-item-sliding *ngFor="let item of productos">
+        <ion-item color="none" id="lista-list-item5">
+          <ion-avatar item-left>
+            <img src="assets/img/dV5Ej8N6SMmJtl5ygW0Y_7.jpg" />
+          </ion-avatar>
+          <h2>
+            {{item.nombre}}
+
+          </h2>
+
+          <h3>
+              <P ALIGN=right>
+                  {{item.precio}}
+                   
+          </h3>
+  
+          <div style="float:right">
+              <button ion-button color="Secondary" (click)="add(item.codigo)">+</button>
+              {{item.cantidad}}
+              <button ion-button color="Danger" (click)="rest(item.codigo)">-</button>
+
+          </div>
+
+         <!--
+          <button ion-button color="Secondary">Incrementar</button>
+          <button ion-button color="Danger">Disminuir</button>
+         -->
+          
+  
+        </ion-item>
+        <!--
+        <ion-item-options side="left">
+          <button ion-button color="light"></button>
+          <button ion-button color="light"></button>
+        </ion-item-options>
+      -->
+      </ion-item-sliding>
+  </ion-list>
+
+  <ion-list id="lista-list6">
+    <ion-item-sliding>
+      <ion-item color="none" id="lista-list-item5">
+        <ion-avatar item-left>
+          <img src="assets/img/dV5Ej8N6SMmJtl5ygW0Y_7.jpg" />
+        </ion-avatar>
+        <h2>
+          Seven Up 750 mL
+        </h2>
+        <h3>
+            <P ALIGN=right>
+          2.500
+        </h3>
+
+        <button ion-button color="Secondary">Incrementar</button>
+        <button ion-button color="Danger">Disminuir</button>
+     
+        <h2 (click)="hello()">
+
+          Codigos Escaneados: <br>
+          {{txt2[0]}} <br>
+          {{txt2[1]}} <br>
+          {{txt2[2]}} <br>
+          {{txt2[3]}} <br>
+          {{txt2[4]}} <br>
+
+        </h2>
+      
+        
+
+
+       <!--
+        <button > {{txt}} </button>
+        <button ion-button color="secondary">{{txt}}</button>
+      -->
+
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="light"></button>
+        <button ion-button color="light"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item color="none" id="lista-list-item6">
+      <ion-avatar item-left>
+        <img src="assets/img/wvDyYWKeTnW3tsInD7py_jum.jpg" />
+      </ion-avatar>
+      <h2>
+        Chocolatina Jumbo
+      </h2>
+      <h3>
+        <P ALIGN=right>
+      3.500
+    </h3>
+    </ion-item>
+    <ion-item-sliding>
+      <ion-item color="none" id="lista-list-item7">
+        <ion-avatar item-left>
+          <img src="assets/img/9AkgMUS1ymxhySqDb68A_papas-margarita-pollo-110gr.jpg" />
+        </ion-avatar>
+        <h2>
+          Papas Margarita
+        </h2>
+        <h3>
+          <P ALIGN=right>
+        2.400
+      </h3>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="positive">
+          b
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <div class="spacer" style="width:299.531px;height:50.9844px;" id="lista-spacer10"></div>
+  <form id="lista-form8">
+    <ion-item id="lista-input15">
+      <ion-label>
+        Total
+      </ion-label>
+      <ion-input type="text" placeholder="8.400" name="Total"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>
