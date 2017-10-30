@@ -23,7 +23,8 @@ constructor(public http: Http) {
   }
 
   consumirArticulos(){
-   return this.http.get('http://192.168.1.117:1337/api/articles').map(res => res.json());
+   return this.http.get('http://192.168.0.18:1337/api/articles').map(res => res.json());
+   //return this.http.get('http://localhost:1337/api/articles').map(res => res.json());
   }
 
 }

@@ -28,17 +28,17 @@ export class ListaPage {
   }
   
   add(codigo){
-    for(var i=0;i<this.productos.length;i++){
-        if(this.productos[i].codigo == codigo){
-          this.productos[i].cantidad=this.productos[i].cantidad+1
+    for(var i=0;i<this.productos1.length;i++){
+        if(this.productos1[i].codigo == codigo){
+          this.productos1[i].cantidad=this.productos1[i].cantidad+1
         }
     }
   }
 
   rest(codigo){
-    for(var i=0;i<this.productos.length;i++){
-      if(this.productos[i].codigo == codigo){
-        this.productos[i].cantidad=this.productos[i].cantidad-1
+    for(var i=0;i<this.productos1.length;i++){
+      if(this.productos1[i].codigo == codigo){
+        this.productos1[i].cantidad=this.productos1[i].cantidad-1
       }
   }
   }
@@ -47,7 +47,29 @@ export class ListaPage {
 
   consumir(){
     this.codigoProvider.consumirArticulos().subscribe(data => {
+     // var productoRecibido=new Object();
+     // productoRecibido = {nombre:"san",ape:"duj"};
+      //this.productos1=productoRecibdo.author;
       this.productos1= data;
+    //  console.log(productoRecibido.nombre);
+      //console.log(productoRecibido[0]);
+
+      var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';
+      //var jsontext = data;
+      var contact = JSON.parse(jsontext);
+      //console.log(JSON.stringify(data));
+      var data2=JSON.stringify(data)
+      var dataJSON=JSON.parse(data2);
+      console.log(data2);
+      console.log(dataJSON[0].author);
+      //console.log(data);
+      console.log(Array.isArray(this.productos1));
+      //this.productos1[0].cant=1;
+      this.productos1[0].cantidad=1;
+      this.productos1[1].cantidad=1;
+      console.log(this.productos1);
+      //this.productos1[0].prototype=function(){cantidad=1};
+     console.log("hola");
   });
   }
 
