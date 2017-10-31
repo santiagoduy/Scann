@@ -5,6 +5,9 @@ import { ListaPage } from '../lista/lista';
 import { CodigoProvider } from '../../providers/codigo/codigo';
 import { Storage } from '@ionic/storage';
 
+//import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
+
+
 @Component({
   selector: 'page-escaner',
   templateUrl: 'escaner.html'
@@ -17,7 +20,7 @@ export class EscanerPage {
   codigoescaneado="";
   tamanoLista=0;
 
-  constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner, public codigoProvider: CodigoProvider, public storage:Storage) {
+constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner, public codigoProvider: CodigoProvider, public storage:Storage, /*private bluetoothSerial: BluetoothSerial*/) {
     
   }
 
@@ -48,5 +51,9 @@ export class EscanerPage {
  // mostarCodigos(){
   //this.tamanoLista=this.codigosEscaneados.length;
   //}
+ 
+  //EnviarBluetooth(){
+   // this.bluetoothSerial.write('hello world').then(success, failure);
+ // }
   
 }
